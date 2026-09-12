@@ -831,3 +831,18 @@
     background: var(--color-black);
     color: var(--color-yellow);
 }
+/* --- RESPONSIVE CHATBOT MOBILE --- */
+@media screen and (max-width: 768px) {
+    .chatbot-window {
+        right: 0;
+        left: 0;
+        margin: 0 auto; /* Centre parfaitement la boîte horizontalement */
+        width: 92%; /* Prend presque toute la largeur de l'écran */
+        bottom: 85px; /* Laisse de l'espace pour le bouton flottant */
+    }
+    
+    .ai-btn {
+        bottom: 20px; /* Repositionne le bouton un peu plus bas sur mobile */
+        right: 20px;
+    }
+}
