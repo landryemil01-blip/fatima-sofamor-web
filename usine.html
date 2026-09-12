@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre Histoire & Usine | FATIMA - SOFAMOR</title>
+    
+    <!-- Polices & Icônes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Feuilles de style -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+    <!-- Barre de navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logos/Sofamor logo.png" alt="SOFAMOR Logo" height="35">
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="catalogue.html">Collections</a>
+                <a href="usine.html" class="active">À propos de nous</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <a href="catalogue.html" class="btn-primary-outline desktop-only">Découvrir</a>
+        </div>
+    </header>
+
+    <!-- En-tête de la page -->
+    <section class="page-header">
+        <h1>L'Excellence au cœur de Kinshasa</h1>
+        <p>Découvrez l'histoire de FATIMA et le savoir-faire derrière la marque SOFAMOR.</p>
+    </section>
+
+    <!-- Section 1 : L'Histoire et la Vision (Texte + Image) -->
+    <section class="about-split">
+        <div class="about-text">
+            <h2>Notre Vision de l'Aménagement</h2>
+            <p>L'entreprise <strong>FATIMA</strong> est née d'une ambition claire : offrir aux foyers et aux entreprises congolaises un mobilier alliant le prestige international et l'expertise locale.</p>
+            <p>À travers notre marque <strong>SOFAMOR</strong>, nous sélectionnons les meilleurs matériaux bruts et designs en provenance de Turquie et de Chine. Ces éléments premium sont ensuite rapatriés dans nos ateliers où la magie opère.</p>
+        </div>
+        <div class="about-image">
+            <!-- Image d'illustration (un beau bureau ou un artisan au travail) -->
+            <img src="assets/images/usine/USINE FTM.jpg" alt="Histoire de Fatima">
+        </div>
+    </section>
+
+    <!-- Section 2 : L'Usine et le Montage -->
+    <section class="factory-gallery">
+        <div class="section-title">
+            <h2>Notre Usine de Fabrication</h2>
+            <p>Un montage minutieux réalisé par nos artisans qualifiés en RDC.</p>
+        </div>
+        <div class="gallery-grid">
+            <!-- Mets ici les photos de ton usine / équipe -->
+            <img src="assets/images/usine/USINE 2 BOIS.jpg" alt="Assemblage des divans">
+            <img src="assets/images/usine/assemblage usine.jpg" alt="Atelier de menuiserie portes">
+            <img src="assets/images/usine/finition.png" alt="Détail des finitions SOFAMOR">
+        </div>
+    </section>
+
+    <!-- Section 3 : Logistique et Flotte de Camions -->
+    <section class="logistics-section">
+        <div class="logistics-content">
+            <h2>Un Service de Livraison Intégré</h2>
+            <p>Parce que le service premium ne s'arrête pas à la sortie de l'usine, FATIMA dispose de sa propre flotte de camions. Nous assurons un transport sécurisé et une livraison rapide de vos salons et portes, directement de nos ateliers jusqu'à votre salon ou votre bureau.</p>
+            <a href="contact.html" class="btn-outline">Planifier une livraison</a>
+        </div>
+        <div class="logistics-image">
+            <!-- Photo d'un de vos camions de livraison -->
+            <img src="assets/images/usine/caminion livraison.jpg" alt="Camion de livraison FATIMA">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="assets/images/logos/Sofamor logo.png" alt="SOFAMOR Logo" width="160" style="background-color: #ffffff; padding: 10px; border-radius: 5px; margin-bottom: 20px;">
+                <p>L'excellence du mobilier et de l'aménagement intérieur.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="catalogue.html">Nos Collections</a></li>
+                    <li><a href="usine.html">Notre Usine</a></li>
+                    <li><a href="contact.html">Service de Livraison</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Kinshasa, RDC, Ndjili Brasseries</p>
+                <p><i class="fa-solid fa-phone"></i> +243 00 000 00 00</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Menu Mobile -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.getElementById('mobile-menu');
+            const navLinks = document.getElementById('nav-links');
+            const icon = menuToggle.querySelector('i');
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    if (navLinks.classList.contains('active')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-xmark');
+                    } else {
+                        icon.classList.remove('fa-xmark');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

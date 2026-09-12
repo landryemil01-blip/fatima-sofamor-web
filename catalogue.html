@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Collections | FATIMA - SOFAMOR</title>
+    
+    <!-- Polices & Icônes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Feuilles de style -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+    <!-- Barre de navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logos/Sofamor logo.png" alt="SOFAMOR Logo" height="35">
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="catalogue.html" class="active">Collections</a>
+                <a href="usine.html">À propos de nous</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <a href="catalogue.html" class="btn-primary-outline desktop-only">Découvrir</a>
+        </div>
+    </header>
+<!-- En-tête de la page Catalogue -->
+    <section class="page-header">
+        <h1>Nos Collections de Luxe</h1>
+        <p>Des salons, chaises et portes conçus avec une attention absolue aux détails.</p>
+    </section>
+
+    <!-- Filtres de Catégories (Les différents niveaux) -->
+    <div class="category-filters">
+        <button class="filter-btn active" data-filter="tout">Tout voir</button>
+        <button class="filter-btn" data-filter="salons">Salons & Divans</button>
+        <button class="filter-btn" data-filter="portes">Portes Premium</button>
+        <button class="filter-btn" data-filter="fantaisies">Fantaisies</button>
+    </div>
+
+    <!-- Grille des produits -->
+    <section class="catalogue-section">
+        <div class="product-grid">
+            
+            <!-- Produit 1 : Salon (Catégorie: salons) -->
+            <div class="product-card" data-category="salons">
+                <div class="product-image">
+                    <img src="assets/images/produits/salon royal.png" alt="Salon Velours Gris">
+                </div>
+                <div class="product-info">
+                    <h3>Salon Velours Royal</h3>
+                    <button class="btn-outline" onclick="ouvrirDetails('Salon Velours Royal', 'assets/images/produits/salon royal.png', 'Cet ensemble 5 places incarne le summum du luxe et du confort. Conçu avec un velours premium soyeux et résistant, il repose sur une structure robuste et des pieds en acier inoxydable. Idéal pour sublimer votre intérieur moderne. Assemblage méticuleux réalisé à Kinshasa.')">
+                        En savoir plus
+                    </button>
+                </div>
+            </div>
+
+            <!-- Produit 2 : Divan (Catégorie: salons) -->
+            <div class="product-card" data-category="salons">
+                <div class="product-image">
+                    <img src="assets/images/produits/salon luxe.png" alt="Divan Beige">
+                </div>
+                <div class="product-info">
+                    <h3>Divan d'Angle Beige</h3>
+                    <button class="btn-outline" onclick="ouvrirDetails('Divan d\'Angle Beige', 'assets/images/produits/salon luxe.png', 'Design épuré et ultra-moderne. Ce grand divan d\'angle offre un confort d\'assise exceptionnel grâce à sa mousse haute densité. Parfait pour les grands espaces de vie en entreprise ou à la maison. Tissu antitache d\'importation turque.')">
+                        En savoir plus
+                    </button>
+                </div>
+            </div>
+
+            
+            <!-- Produit 2 : Divan (Catégorie: salons) -->
+            <div class="product-card" data-category="salons">
+                <div class="product-image">
+                    <img src="assets/images/produits/salon luxe blu.png" alt="Divan Beige">
+                </div>
+                <div class="product-info">
+                    <h3>Salon Complet bleu</h3>
+                    <button class="btn-outline" onclick="ouvrirDetails('Un salon confortable', 'assets/images/produits/salon luxe blu.png', 'Design épuré et ultra-moderne. Un joli bijoux pour vos salons grand divan d\'angle offre un confort d\'assise exceptionnel grâce à sa mousse haute densité. Parfait pour les grands espaces de vie en entreprise ou à la maison. Tissu antitache d\'importation turque.')">
+                        En savoir plus
+                    </button>
+                </div>
+            </div>
+            <!-- Produit 3 : Porte (Exemple - Catégorie: portes) -->
+            <div class="product-card" data-category="portes">
+                <div class="product-image">
+                    <!-- Mets une vraie image de porte ici -->
+                    <img src="assets/images/produits/door.png" alt="Porte Blindée" style="background-color: #eee;">
+                </div>
+                <div class="product-info">
+                    <h3>Porte Blindée Prestige</h3>
+                    <button class="btn-outline" onclick="ouvrirDetails('Porte Blindée Prestige en bois', 'assets/images/produits/door.png', 'Sécurité maximale et élégance. Nos portes blindées sont dotées de serrures multipoints et finies avec un revêtement en bois précieux. Idéales pour les bureaux de direction et les maisons de standing.')">
+                        En savoir plus
+                    </button>
+                </div>
+            </div>
+                <!-- Produit 4 : Divan (Catégorie: salons) -->
+            <div class="product-card" data-category="salons">
+                <div class="product-image">
+                    <img src="assets/images/produits/divan beige.png" alt="Divan Beige">
+                </div>
+                <div class="product-info">
+                    <h3>Divan d'Angle Beige</h3>
+                    <button class="btn-outline" onclick="ouvrirDetails('Divan une place d\'Angle Beige', 'assets/images/produits/divan beige.png', 'Design épuré et ultra-moderne. Ce grand divan d\'angle offre un confort d\'assise exceptionnel grâce à sa mousse haute densité. Parfait pour les grands espaces de vie en entreprise ou à la maison. Tissu antitache d\'importation turque.')">
+                        En savoir plus
+                    </button>
+                </div>
+            </div>
+ <!-- Produit 5 : Salon (Catégorie: salons) -->
+            <div class="product-card" data-category="salons">
+                <div class="product-image">
+                    <img src="assets/images/produits/salon basse luxe.png" alt="Salon Velours Gris">
+                </div>
+                <div class="product-info">
+                    <h3>Salon Velours Royal</h3>
+                    <button class="btn-outline" onclick="ouvrirDetails('Salon basse luxe', 'assets/images/produits/salon basse luxe.png', 'Cet ensemble 7 places incarne le summum du luxe et du confort. Conçu avec un velours premium soyeux et résistant, il repose sur une structure robuste et des pieds en acier inoxydable. Idéal pour sublimer votre intérieur moderne. Assemblage méticuleux réalisé à Kinshasa.')">
+                        En savoir plus
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+   <!-- FENÊTRE MODALE (DÉTAILS PRODUIT) -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <!-- Bouton "X" en haut à droite -->
+            <span class="close-modal" onclick="fermerModal()">&times;</span>
+            
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImg" src="" alt="Produit">
+                </div>
+                <div class="modal-details">
+                    <h2 id="modalTitle">Titre du produit</h2>
+                    <p id="modalDesc">Description complète du produit...</p>
+                    
+                    <div class="modal-actions">
+                        <button class="btn-primary" id="modalOrderBtn" onclick="commanderDepuisModal()">
+                            Commander <i class="fa-brands fa-whatsapp"></i>
+                        </button>
+                        <!-- Nouveau bouton de retour pour mobile -->
+                        <button class="btn-outline btn-retour" onclick="fermerModal()">
+                            Retour
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- (Ton code de footer actuel vient ici) -->
+            <div class="footer-brand">
+                <img src="assets/images/logos/Sofamor logo.png" alt="SOFAMOR Logo" width="160" style="background-color: #ffffff; padding: 10px; border-radius: 5px; margin-bottom: 20px;">
+                <p>L'excellence du mobilier et de l'aménagement intérieur.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="catalogue.html">Nos Collections</a></li>
+                    <li><a href="usine.html">Notre Usine</a></li>
+                    <li><a href="contact.html">Service de Livraison</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Kinshasa, RDC</p>
+                <p><i class="fa-solid fa-phone"></i> +243 00 000 00 00</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOUTONS FLOTTANTS (Chatbot & Scroll) -->
+    <div class="floating-actions">
+        <!-- Bouton flèche pour remonter (caché au début, apparaît au scroll) -->
+        <button id="scrollTopBtn" class="float-btn scroll-top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+        <!-- Bouton Chatbot WhatsApp -->
+        <a href="https://wa.me/243000000000" target="_blank" class="float-btn chat-btn">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script>
+        // --- 1. GESTION DES FILTRES DE CATÉGORIES ---
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const productCards = document.querySelectorAll('.product-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Retire la classe active de tous les boutons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Ajoute la classe active au bouton cliqué
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                productCards.forEach(card => {
+                    if (filterValue === 'tout' || card.getAttribute('data-category') === filterValue) {
+                        card.classList.remove('hide');
+                    } else {
+                        card.classList.add('hide');
+                    }
+                });
+            });
+        });
+
+        // --- 2. GESTION DE LA FENÊTRE MODALE DÉTAILS ---
+        const modal = document.getElementById('productModal');
+        const closeBtn = document.querySelector('.close-modal');
+        let currentProductName = ""; // Garde en mémoire le nom du produit pour WhatsApp
+
+        function ouvrirDetails(titre, imageSrc, description) {
+            document.getElementById('modalTitle').innerText = titre;
+            document.getElementById('modalImg').src = imageSrc;
+            document.getElementById('modalDesc').innerText = description;
+            
+            currentProductName = titre; // Sauvegarde le nom
+            modal.classList.add('show');
+        }
+
+        // Fermer la modale
+        closeBtn.addEventListener('click', () => {
+            modal.classList.remove('show');
+        });
+
+        // Fermer la modale si on clique en dehors du cadre blanc
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('show');
+            }
+        });
+
+        // --- 3. COMMANDE WHATSAPP DEPUIS LA MODALE ---
+        function commanderDepuisModal() {
+            const numero = "243000000000"; // Ton numéro WhatsApp
+            const message = `Bonjour FATIMA, je souhaite en savoir plus et commander l'article : ${currentProductName}.`;
+            const url = `https://wa.me/${numero}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+
+        // (Garde le reste de ton JS pour le menu hamburger et le scroll ici si besoin)
+    </script>
+</body>
+</html>

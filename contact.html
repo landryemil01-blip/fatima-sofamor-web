@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Livraison | FATIMA - SOFAMOR</title>
+    
+    <!-- Polices & Icônes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Feuilles de style -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+    <!-- Barre de navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logos/Sofamor logo.png" alt="SOFAMOR Logo" height="35">
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="catalogue.html">Collections</a>
+                <a href="usine.html">À propos de nous</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+            <a href="catalogue.html" class="btn-primary-outline desktop-only">Découvrir</a>
+        </div>
+    </header>
+
+    <!-- En-tête de la page -->
+    <section class="page-header">
+        <h1>Contactez-Nous</h1>
+        <p>Une question, un projet d'aménagement ? Notre équipe à Kinshasa est à votre entière disposition.</p>
+    </section>
+
+    <!-- Section Principale Contact -->
+    <section class="contact-section">
+        
+        <!-- Bloc Informations -->
+        <div class="contact-info-block">
+            <h2>Parlons de votre projet</h2>
+            <p>Que ce soit pour équiper vos bureaux ou sublimer votre maison, FATIMA - SOFAMOR vous accompagne de la commande à l'installation.</p>
+            
+            <div class="info-items">
+                <div class="info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h4>Notre Adresse</h4>
+                        <p>Kinshasa, RDC<br>Ndjili brasseries</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <h4>Téléphone</h4>
+                        <p>+243 00 000 00 00</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>contact@fatima-sofamor.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="whatsapp-direct">
+                <p>Besoin d'une réponse immédiate ?</p>
+                <a href="https://wa.me/243000000000" target="_blank" class="btn-whatsapp-dark">
+                    <i class="fa-brands fa-whatsapp"></i> Discuter sur WhatsApp
+                </a>
+            </div>
+        </div>
+
+        <!-- Bloc Formulaire -->
+        <div class="contact-form-block">
+            <form action="#" method="POST" class="premium-form">
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="nom">Nom complet</label>
+                        <input type="text" id="nom" placeholder="Votre nom" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="telephone">Téléphone</label>
+                        <input type="tel" id="telephone" placeholder="Votre numéro" required>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="email">Adresse e-mail</label>
+                    <input type="email" id="email" placeholder="votre.email@exemple.com" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="sujet">Sujet de votre demande</label>
+                    <select id="sujet">
+                        <option value="infos">Demande d'informations</option>
+                        <option value="livraison">Question sur la livraison</option>
+                        <option value="sur-mesure">Projet d'aménagement complet</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="message">Votre message</label>
+                    <textarea id="message" rows="5" placeholder="Comment pouvons-nous vous aider ?" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn-primary" style="width: 100%;">Envoyer le message <i class="fa-regular fa-paper-plane"></i></button>
+            </form>
+        </div>
+
+    </section>
+
+    <!-- Carte Google Maps -->
+    <section class="map-container">
+        <!-- Remplacez le src par le lien d'intégration de votre adresse exacte sur Google Maps -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127504.42220138547!2d15.22894165!3d-4.401314999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a313010b40eb3%3A0xc6c4f0da99761dfa!2sKinshasa%2C%20R%C3%A9publique%20d%C3%A9mocratique%20du%20Congo!5e0!3m2!1sfr!2s!4v1700000000000!5m2!1sfr!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="assets/images/logos/Sofamor logo.png" alt="SOFAMOR Logo" width="160" style="background-color: #ffffff; padding: 10px; border-radius: 5px; margin-bottom: 20px;">
+                <p>L'excellence du mobilier et de l'aménagement intérieur.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="catalogue.html">Nos Collections</a></li>
+                    <li><a href="usine.html">Notre Usine</a></li>
+                    <li><a href="contact.html">Service de Livraison</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Kinshasa, RDC, Ndjili Brasseries </p>
+                <p><i class="fa-solid fa-phone"></i> +243 00 000 00 00</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Menu Mobile -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.getElementById('mobile-menu');
+            const navLinks = document.getElementById('nav-links');
+            const icon = menuToggle.querySelector('i');
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    if (navLinks.classList.contains('active')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-xmark');
+                    } else {
+                        icon.classList.remove('fa-xmark');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

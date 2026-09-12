@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FATIMA | Mobilier de Luxe & Menuiserie Premium - SOFAMOR</title>
+    
+    <!-- Polices Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Icônes FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Feuilles de style -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+<!-- Barre de navigation Fixe -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logos/Sofamor logo.png" alt="SOFAMOR Logo" height="35">
+            </a>
+            
+            <!-- Le bouton Hamburger (3 barres) caché sur PC, visible sur mobile -->
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            
+            <!-- Les liens du menu -->
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html" class="active">Accueil</a>
+                <a href="catalogue.html">Collections</a>
+                <a href="usine.html">À propos de nous</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            
+            <a href="catalogue.html" class="btn-primary-outline desktop-only">Découvrir</a>
+        </div>
+    </header>
+
+    <!-- Section Hero (Bannière Principale) -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="subtitle">Design & Fabrication Premium</span>
+            <h1>L'Élégance pour vos Maisons & Bureaux</h1>
+            <p>Découvrez les collections exclusives FATIMA et la marque SOFAMOR. Des salons de luxe, des chaises et des portes conçus avec passion, assemblés à Kinshasa.</p>
+            <div class="hero-actions">
+               <a href="catalogue.html" class="btn-primary">Voir le Catalogue <i class="fa-solid fa-arrow-right-long"></i></a>
+                <button class="btn-whatsapp" onclick="window.location.href='https://wa.me/243000000000?text=Bonjour%20FATIMA,%20je%20souhaite%20des%20informations%20sur%20vos%20salons'">
+                    <i class="fa-brands fa-whatsapp"></i> Contactez-nous
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER ÉPURÉ ET MODERNE -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+              excellence  <img src="assets/images/logos/Sofamor logo.png" alt="SOFAMOR Logo" width="160" style="background-color: #ffffff; padding: 10px; border-radius: 5px; margin-bottom: 20px;">
+                <p>L'art du mobilier et de l'aménagement intérieur. Importation premium et assemblage local pour sublimer vos espaces.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="catalogue.html">Nos Collections</a></li>
+                    <li><a href="usine.html">Notre Usine</a></li>
+                    <li><a href="contact.html">Service de Livraison</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Kinshasa, RDC, Ndjili Brasseries </p>
+                <p><i class="fa-solid fa-phone"></i> +243 00 000 00 00</p>
+                <p><i class="fa-solid fa-envelope"></i> contact@fatima-sofamor.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Entreprise FATIMA - SOFAMOR. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <!-- MAQUETTE ASSISTANT IA -->
+    <div class="chatbot-window" id="chatbot-window">
+        <div class="chatbot-header">
+            <span><i class="fa-solid fa-robot"></i> Assistant SOFAMOR</span>
+            <button id="close-chatbot">&times;</button>
+        </div>
+        <div class="chatbot-body" id="chatbot-body">
+            <div class="message ai-msg">
+                Bonjour ! Je suis l'assistant virtuel de FATIMA. Comment puis-je vous aider aujourd'hui ?
+            </div>
+        </div>
+        <!-- Boutons de réponses rapides -->
+        <div class="chatbot-suggestions">
+            <button onclick="askAI('Quels sont les délais de livraison ?', 'Nos délais de livraison à Kinshasa sont de 24h à 48h après confirmation.')">Délais de livraison ?</button>
+            <button onclick="askAI('Où êtes-vous situés ?', 'Notre showroom principal est situé à Kinshasa. Consultez notre page Contact pour la carte exacte.')">Où êtes-vous ?</button>
+            <button onclick="askAI('Faites-vous du sur-mesure ?', 'Absolument ! Nos artisans peuvent adapter les dimensions de nos portes et salons selon vos besoins.')">Sur-mesure ?</button>
+        </div>
+    </div>
+
+   <!-- BOUTON FLOTTANT IA (Tête de robot) -->
+    <button id="open-chatbot" class="float-btn ai-btn">
+        <i class="fa-solid fa-robot"></i>
+    </button>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.getElementById('mobile-menu');
+            const navLinks = document.getElementById('nav-links');
+            const icon = menuToggle.querySelector('i');
+
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    
+                    // Transformation de l'icône
+                    if (navLinks.classList.contains('active')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-xmark');
+                    } else {
+                        icon.classList.remove('fa-xmark');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            }
+        });
+
+        // --- 5. LOGIQUE DU CHATBOT IA ---
+        const aiBtn = document.getElementById('open-chatbot');
+        const aiWindow = document.getElementById('chatbot-window');
+        const closeAiBtn = document.getElementById('close-chatbot');
+        const chatBody = document.getElementById('chatbot-body');
+
+        if (aiBtn && aiWindow) {
+            // Ouvrir / Fermer le chat
+            aiBtn.addEventListener('click', () => {
+                aiWindow.classList.toggle('show');
+            });
+            closeAiBtn.addEventListener('click', () => {
+                aiWindow.classList.remove('show');
+            });
+        }
+
+        // Fonction pour simuler la discussion
+        function askAI(question, reponseAutomatique) {
+            // 1. Afficher la question de l'utilisateur
+            const userMsg = document.createElement('div');
+            userMsg.className = 'message user-msg';
+            userMsg.innerText = question;
+            chatBody.appendChild(userMsg);
+            
+            // Scroll vers le bas
+            chatBody.scrollTop = chatBody.scrollHeight;
+
+            // 2. Simuler un temps de réflexion de l'IA (600ms)
+            setTimeout(() => {
+                const aiMsg = document.createElement('div');
+                aiMsg.className = 'message ai-msg';
+                aiMsg.innerText = reponseAutomatique;
+                chatBody.appendChild(aiMsg);
+                
+                // Scroll vers le bas
+                chatBody.scrollTop = chatBody.scrollHeight;
+            }, 600);
+        }
+    </script>
+</body>
+
+</html> 

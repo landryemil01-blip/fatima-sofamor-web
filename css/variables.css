@@ -1,0 +1,17 @@
+:root {
+    /* Palette de couleurs SOFAMOR / FATIMA */
+    --color-yellow: #FDB913; /* Un jaune doré premium basé sur le logo */
+    --color-yellow-hover: #e0a30b;
+    --color-black: #111111;
+    --color-dark-gray: #222222;
+    --color-white: #FFFFFF;
+    --color-light-gray: #F5F5F5;
+
+    /* Typographie */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Montserrat', sans-serif;
+
+    /* Espacements et Tailles */
+    --transition-speed: 0.3s;
+    --container-width: 1200px;
+}
