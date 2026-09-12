@@ -38,7 +38,8 @@
         </div>
     </header>
 <!-- En-tête de la page Catalogue -->
-    <section class="page-header">
+    <!-- J'utilise ici "Sofa 13.jpg" comme fond, tu peux changer le nom -->
+    <section class="page-header" style="background-image: url('assets/images/produits/SOFA\ 33.png');">
         <h1>Nos Collections de Luxe</h1>
         <p>Des salons, chaises et portes conçus avec une attention absolue aux détails.</p>
     </section>
@@ -181,8 +182,8 @@
             </div>
             <div class="footer-contact">
                 <h3>Contact</h3>
-                <p><i class="fa-solid fa-location-dot"></i> Kinshasa, RDC</p>
-                <p><i class="fa-solid fa-phone"></i> +243 00 000 00 00</p>
+                <p><i class="fa-solid fa-location-dot"></i> Kinshasa, RDC, Ndjili brasseries</p>
+                <p><i class="fa-solid fa-phone"></i>+243910484516</p>
             </div>
         </div>
     </footer>
@@ -194,23 +195,38 @@
             <i class="fa-solid fa-arrow-up"></i>
         </button>
         <!-- Bouton Chatbot WhatsApp -->
-        <a href="https://wa.me/243000000000" target="_blank" class="float-btn chat-btn">
+        <a href="https://wa.me/+243910484516" target="_blank" class="float-btn chat-btn">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
     </div>
 
-    <script>
-        // --- 1. GESTION DES FILTRES DE CATÉGORIES ---
+  <script>
+        // --- 1. MENU MOBILE (Correction) ---
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+        const icon = menuToggle ? menuToggle.querySelector('i') : null;
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                } else {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        }
+
+        // --- 2. FILTRES DE CATÉGORIES ---
         const filterBtns = document.querySelectorAll('.filter-btn');
         const productCards = document.querySelectorAll('.product-card');
 
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                // Retire la classe active de tous les boutons
                 filterBtns.forEach(b => b.classList.remove('active'));
-                // Ajoute la classe active au bouton cliqué
                 btn.classList.add('active');
-
                 const filterValue = btn.getAttribute('data-filter');
 
                 productCards.forEach(card => {
@@ -223,41 +239,37 @@
             });
         });
 
-        // --- 2. GESTION DE LA FENÊTRE MODALE DÉTAILS ---
+        // --- 3. FENÊTRE MODALE ---
         const modal = document.getElementById('productModal');
-        const closeBtn = document.querySelector('.close-modal');
-        let currentProductName = ""; // Garde en mémoire le nom du produit pour WhatsApp
+        let currentProductName = ""; 
 
         function ouvrirDetails(titre, imageSrc, description) {
             document.getElementById('modalTitle').innerText = titre;
             document.getElementById('modalImg').src = imageSrc;
             document.getElementById('modalDesc').innerText = description;
             
-            currentProductName = titre; // Sauvegarde le nom
+            currentProductName = titre; 
             modal.classList.add('show');
         }
 
-        // Fermer la modale
-        closeBtn.addEventListener('click', () => {
-            modal.classList.remove('show');
-        });
+        function fermerModal() {
+            if(modal) modal.classList.remove('show');
+        }
 
-        // Fermer la modale si on clique en dehors du cadre blanc
         window.addEventListener('click', (e) => {
             if (e.target === modal) {
-                modal.classList.remove('show');
+                fermerModal();
             }
         });
 
-        // --- 3. COMMANDE WHATSAPP DEPUIS LA MODALE ---
+        // --- 4. COMMANDE WHATSAPP ---
         function commanderDepuisModal() {
-            const numero = "243000000000"; // Ton numéro WhatsApp
+            // Assure-toi que ton vrai numéro est bien ici
+            const numero = "+243910484516"; 
             const message = `Bonjour FATIMA, je souhaite en savoir plus et commander l'article : ${currentProductName}.`;
             const url = `https://wa.me/${numero}?text=${encodeURIComponent(message)}`;
             window.open(url, '_blank');
         }
-
-        // (Garde le reste de ton JS pour le menu hamburger et le scroll ici si besoin)
     </script>
 </body>
 </html>
